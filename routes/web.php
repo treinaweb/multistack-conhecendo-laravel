@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListarDiarias;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 
@@ -14,13 +15,8 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ListarDiarias::class);
 
-Route::get('/sobre', function () {
-    return view('sobre');
-});
-
+Route::get('/sobre', [SiteController::class, 'sobre']);
 Route::get('/contato', [SiteController::class, 'contato']);
 
