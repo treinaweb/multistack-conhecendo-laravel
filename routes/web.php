@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,5 @@ Route::get('/sobre', function () {
     return view('sobre');
 });
 
-Route::get('/contato', function () {
-    return view('contato');
-});
+Route::get('/contato', [SiteController::class, 'contato']);
 
