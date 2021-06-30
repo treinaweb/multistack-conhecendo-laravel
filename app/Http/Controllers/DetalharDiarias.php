@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Diaria;
 
 class DetalharDiarias extends Controller
 {
@@ -13,6 +14,8 @@ class DetalharDiarias extends Controller
      */
     public function __invoke(int $id)
     {
-        echo "o valor passado é $id";
+        $diaria = Diaria::findOrFail($id);
+
+        dd($diaria->nome_cliente);
     }
 }

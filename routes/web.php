@@ -18,7 +18,7 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/', ListarDiarias::class);
 
-Route::get('/diarias/{id}', DetalharDiarias::class);
+Route::get('/diarias/{id}', DetalharDiarias::class)->name('diarias.show');
 
 //http://127.0.0.1:8000/diarias/valor1
 

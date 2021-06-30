@@ -22,6 +22,7 @@
             <th scope="col">Nome Diarista</th>
             <th scope="col">Atendimento</th>
             <th scope="col">valor</th>
+            <th scope="col">Ação</th>
           </tr>
         </thead>
         <tbody>
@@ -32,6 +33,7 @@
               <td>{{ $diaria->nome_diarista }}</td>
               <td>{{ $diaria->atendimento }}</td>
               <td>{{ $diaria->valor }}</td>
+              <td><a href="{{ route('diarias.show', $diaria) }}" class="btn btn-success">Detalhes</a></td>
             </tr>
           @endforeach  
         </tbody>
