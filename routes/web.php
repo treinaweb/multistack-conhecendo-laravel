@@ -16,7 +16,7 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/', ListarDiarias::class);
+Route::get('/', ListarDiarias::class)->name('index');
 
 Route::get('/diarias/{id}', DetalharDiarias::class)->name('diarias.show');
 

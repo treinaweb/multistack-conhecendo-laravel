@@ -16,6 +16,6 @@ class DetalharDiarias extends Controller
     {
         $diaria = Diaria::findOrFail($id);
 
-        dd($diaria->nome_cliente);
+        return view('detalhar_diarias')->with('diaria', $diaria);
     }
 }
