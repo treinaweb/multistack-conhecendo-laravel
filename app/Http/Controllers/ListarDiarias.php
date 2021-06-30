@@ -15,8 +15,6 @@ class ListarDiarias extends Controller
     {
         $diarias = Diaria::get();
 
-        dd($diarias);
-
-        return view('welcome');
+        return view('welcome')->with('diarias', $diarias);
     }
 }

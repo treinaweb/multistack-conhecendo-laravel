@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Estou na página sobre</h1>
+    <h1>Estou na página sobre {{ $empresa123 }}</h1>
 </body>
 </html>

@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>Olá Treinaweb 123</h1>
+
+    @dd($diarias)
 </body>
 </html>
