@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
 class DetalharDiarias extends Controller
 {
@@ -12,8 +11,8 @@ class DetalharDiarias extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(int $id)
     {
-        echo "chegou aqui";
+        echo "o valor passado é $id";
     }
 }

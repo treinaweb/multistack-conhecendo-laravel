@@ -18,7 +18,9 @@ use App\Http\Controllers\SiteController;
 
 Route::get('/', ListarDiarias::class);
 
-Route::get('/diarias', DetalharDiarias::class);
+Route::get('/diarias/{id}', DetalharDiarias::class);
+
+//http://127.0.0.1:8000/diarias/valor1
 
 Route::get('/sobre', [SiteController::class, 'sobre']);
 Route::get('/contato', [SiteController::class, 'contato']);
