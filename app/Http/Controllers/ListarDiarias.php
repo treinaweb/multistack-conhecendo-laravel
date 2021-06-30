@@ -15,6 +15,6 @@ class ListarDiarias extends Controller
     {
         $diarias = Diaria::get();
 
-        return view('welcome')->with('diarias', $diarias);
+        return view('listar_diarias')->with('diarias', $diarias);
     }
 }
