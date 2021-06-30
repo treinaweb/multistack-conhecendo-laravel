@@ -17,10 +17,10 @@
         <strong>Nome Diarista: </strong> {{ $diaria->nome_diarista }}
       </p>
       <p class="card-text">
-        <strong>Atendimento: </strong> {{ $diaria->atendimento }}
+        <strong>Atendimento: </strong> {{ (new \DateTime($diaria->atendimento))->format('d/m/Y H:i') }}
       </p>
       <p class="card-text">
-        <strong>Valor: </strong> {{ $diaria->valor }}
+        <strong>Valor: </strong> R$ {{ number_format($diaria->valor, 2, ',', '.') }}
       </p>
       <a href="{{ route('index') }}" class="btn btn-primary">Voltar para lista</a>
     </div>

@@ -24,8 +24,8 @@
           <th scope="row">{{ $diaria->id }}</th>
           <td>{{ $diaria->nome_cliente }}</td>
           <td>{{ $diaria->nome_diarista }}</td>
-          <td>{{ $diaria->atendimento }}</td>
-          <td>{{ $diaria->valor }}</td>
+          <td>{{ (new \DateTime($diaria->atendimento))->format('d/m/Y H:i') }}</td>
+          <td>R$ {{ number_format($diaria->valor, 2, ',', '.') }}</td>
           <td><a href="{{ route('diarias.show', $diaria) }}" class="btn btn-success">Detalhes</a></td>
         </tr>
       @endforeach  
